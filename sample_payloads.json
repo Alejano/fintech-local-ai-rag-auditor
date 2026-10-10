@@ -1,0 +1,18 @@
+{
+  "scenarios": [
+    {
+      "name": "Transacción Visa Contactless Válida",
+      "transaction_id": "TX-VISA-VALID-01",
+      "terminal": "POS-NEWLAND-N910",
+      "raw_tlv_hex": "9F26084F5A6B7C8D9E0F1A9F270180820238009F360200159F02060000000150005F2A0204848407A0000000031010",
+      "expected_status": "COMPLIANT"
+    },
+    {
+      "name": "Transacción con Criptograma Trunco y Campos Faltantes",
+      "transaction_id": "TX-CORRUPTED-02",
+      "terminal": "POS-SUNMI-V2PRO",
+      "raw_tlv_hex": "9F2604AABBCCDD820238009F36020015",
+      "expected_status": "REJECTED"
+    }
+  ]
+}
